@@ -7,4 +7,6 @@ const ctrl = require("./home.ctrl");
 
 router.get("/", ctrl.output.home);
 
+router.get("/api/customers", ctrl.read.customers);
+
 module.exports = router;
