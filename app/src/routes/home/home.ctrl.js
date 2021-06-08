@@ -6,6 +6,9 @@ const output = {
   home: (req, res) => {
     res.render("home/index");
   },
+  site: (req, res) => {
+    res.render("home/insert");
+  },
 };
 
 const read = {
