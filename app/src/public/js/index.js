@@ -12,7 +12,7 @@ table.addEventListener("click", clickHandler);
 function clickHandler(e) {
   const target = e.target;
   const tr = target.parentNode;
-  tr.setAttribute("id", "checked");
+  tr.classList.toggle("checked");
 }
 
 function readCustomer() {
@@ -39,9 +39,15 @@ function readCustomer() {
 }
 
 function moveToSite() {
-  const name = document.querySelector("#checked").childNodes[3].innerHTML;
-  const no = document.querySelector("#checked").childNodes[5].innerHTML;
-  console.log(name);
-  console.log(no);
-  location.href = `/site/${no}/${name}`;
+  const checkedNode = document.querySelectorAll(".checked");
+
+  if (checkedNode.length === 1) {
+    const name = document.querySelector(".checked").childNodes[3].innerHTML;
+    const no = document.querySelector(".checked").childNodes[5].innerHTML;
+    location.href = `/site/${no}/${name}`;
+  } else if (checkedNode.length === 0) {
+    alert("고객 정보를 클릭해주십시오.");
+  } else {
+    alert("한개만 클릭해주십시오.");
+  }
 }

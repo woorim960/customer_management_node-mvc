@@ -47,7 +47,7 @@ th:first-child{
   width: 5%;
 }
 
-#checked {
+.checked {
   background-color: #7f8c8d;
 }
 
@@ -60,10 +60,6 @@ td {
   overflow: hidden;
   text-overflow: ellipsis;
   max-width: 200px;
-}
-
-tr #checked {
-  background-color: #7f8c8d;
 }
 
 td:first-child {
