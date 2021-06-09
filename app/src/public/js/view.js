@@ -19,17 +19,35 @@ function moveToRoot() {
 }
 
 function moveToInsertSite() {
-  location.href = `/site/new/${no}/${name}`;
+  const checkedNode = document.querySelectorAll(".checked");
+
+  if (checkedNode.length === 1) {
+    location.href = `/site/new/${no}/${name}`;
+  } else if (checkedNode.length === 0) {
+    alert("사이트 정보를 클릭해주십시오.");
+  } else {
+    alert("한개만 클릭해주십시오.");
+  }
 }
 
 function moveToUpdateSite() {
-  location.href = `/site/edit/${no}/${name}`;
+  const checkedNode = document.querySelectorAll(".checked");
+
+  if (checkedNode.length === 1) {
+    const no = document.querySelector(".checked").childNodes[3].innerHTML;
+    const name = document.querySelector(".checked").childNodes[5].innerHTML;
+    location.href = `/site/edit/${no}/${name}`;
+  } else if (checkedNode.length === 0) {
+    alert("사이트 정보를 클릭해주십시오.");
+  } else {
+    alert("한개만 클릭해주십시오.");
+  }
 }
+
 function view() {
   fetch(`/api/sites/${no}/${name}`)
     .then((res) => res.json())
     .then((res) => {
-      console.log(res);
       for (let el of res) {
         const tr = document.createElement("tr");
         const html = `
@@ -49,31 +67,39 @@ function view() {
 function clickHandler(e) {
   const target = e.target;
   const tr = target.parentNode;
-  tr.setAttribute("id", "checked");
-  console.log(tr);
+
+  tr.classList.toggle("checked");
 }
 
 function deletes() {
-  const tr = document.querySelector("#checked");
-  const customerNo = tr.childNodes[3].innerHTML;
+  const checkedNode = document.querySelectorAll(".checked");
 
-  const req = {
-    siteNo: customerNo,
-  };
+  if (checkedNode.length === 1) {
+    const tr = document.querySelector(".checked");
+    const customerNo = tr.childNodes[3].innerHTML;
 
-  fetch("/api/site", {
-    method: "DELETE",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(req),
-  })
-    .then((res) => res.json())
-    .then((isSuccess) => {
-      if (isSuccess) {
-        tr.remove();
-        return alert("정상적으로 삭제 되었습니다.");
-      }
-      return alert("삭제에 실패하였습니다. 개발자에게 문의해주세요.");
-    });
+    const req = {
+      siteNo: customerNo,
+    };
+
+    fetch("/api/site", {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(req),
+    })
+      .then((res) => res.json())
+      .then((isSuccess) => {
+        if (isSuccess) {
+          tr.remove();
+          return alert("정상적으로 삭제 되었습니다.");
+        }
+        return alert("삭제에 실패하였습니다. 개발자에게 문의해주세요.");
+      });
+  } else if (checkedNode.length === 0) {
+    alert("사이트 정보를 클릭해주십시오.");
+  } else {
+    alert("한개만 클릭해주십시오.");
+  }
 }

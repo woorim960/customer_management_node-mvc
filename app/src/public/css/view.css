@@ -115,3 +115,7 @@ table button {
 .button-ok {
   margin-left: 90px;
 }
+
+.checked {
+  background-color: #7f8c8d;
+}

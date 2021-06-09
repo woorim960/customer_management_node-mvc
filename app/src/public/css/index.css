@@ -62,6 +62,7 @@ td {
   max-width: 200px;
 }
 
+
 td:first-child {
   width: 5%;
 }

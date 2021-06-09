@@ -9,6 +9,7 @@ const ctrl = require("./home.ctrl");
 router.get("/", ctrl.output.home);
 router.get("/site/:no/:name", ctrl.output.site);
 router.get("/site/new/:no/:name", ctrl.output.insertSite);
+router.get("/site/edit/:no/:name", ctrl.output.updateSite);
 
 // Read Data
 router.get("/api/customers", ctrl.read.customers);
