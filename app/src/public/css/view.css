@@ -28,7 +28,7 @@ input {
 .db-data-table {
   overflow-x: scroll;
   overflow-y: scroll;
-  /* table-layout: fixed; */
+  margin-top: 10px;
   border: 1px solid #222;
   width: 100%;
   height: 300px;
@@ -47,9 +47,6 @@ th:first-child{
   width: 5%;
 }
 
-#checked {
-  background-color: #7f8c8d;
-}
 
 td {
   text-align: center;
@@ -62,13 +59,10 @@ td {
   max-width: 200px;
 }
 
-tr #checked {
-  background-color: #7f8c8d;
-}
-
 td:first-child {
   width: 5%;
 }
+
 
 
 button {
@@ -111,10 +105,13 @@ table button {
 
 .db-user-button-container {
   flex-direction: row;
-  padding-left: 20px;
   padding-top: 10px;
 }
 
-#button-view {
+.button-insert {
   width: 150px;
+}
+
+.button-ok {
+  margin-left: 90px;
 }

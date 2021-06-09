@@ -7,7 +7,9 @@ const output = {
     res.render("home/index");
   },
   site: (req, res) => {
-    res.render("home/insert");
+    const no = req.params.no;
+    const name = req.params.name;
+    res.render("home/view", { no, name });
   },
 };
 

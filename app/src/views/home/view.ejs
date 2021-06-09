@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/view.css">
+  <script src="/js/view.js" defer></script>
+  <title>Document</title>
+</head>
+<body>
+  
+  <div class="container">
+    <div container="db-user-insert">
+      <label for="user-no">고객 번호 : </label>
+      <input id="user-no" type="text" value="<%= no %>">
+
+    </div>
+    <div container="db-user-insert">
+      <label for="user-name">고객 이름 : </label>
+      <input id="user-name" type="text" value="<%= name %>">
+    </div>
+
+
+    <div class="db-data-table" >
+      <table>
+        <tr>
+          <th class="th-no">번호</th>
+          <th class="th-name">고객 사이트 번호</th>
+          <th class="th-customer-no">고객 사이트 이름</th>
+          <th class="th-contract-start">고객 사이트 주소</th>
+        </tr>
+      </table>
+    </div>
+    <div class="db-user-button-container">
+      <button class="button-insert">고객 사이트 입력</button>
+      <button>고객 사이트 수정</button>
+      <button>고객 사이트 삭제</button>
+      <button class="button-ok">확인</button>
+    </div>
+  </div>
+
+</body>
+</html>
