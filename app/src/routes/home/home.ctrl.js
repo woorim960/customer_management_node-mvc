@@ -56,7 +56,23 @@ const read = {
   },
 };
 
+const create = {
+  site: (req, res) => {
+    const customerNo = req.body.customerNo;
+    const siteName = req.body.siteName;
+    const siteAddress = req.body.siteAddress;
+
+    const sql = `INSERT INTO sites(customer_no, name, address) VALUES (?, ?, ?);`;
+
+    db.query(sql, [customerNo, siteName, siteAddress], (err, result) => {
+      if (err) throw err;
+      res.json(Boolean(result.affectedRows));
+    });
+  },
+};
+
 module.exports = {
   output,
   read,
+  create,
 };
