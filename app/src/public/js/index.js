@@ -21,15 +21,15 @@ function readCustomer() {
   fetch(`/api/customers?search=${input}`)
     .then((res) => res.json())
     .then((res) => {
-      for (let el of res) {
+      for (let i in res) {
         const tr = document.createElement("tr");
         const html = `
-                  <td></td>
-                  <td id="name">${el.name}</td>
-                  <td id="no">${el.no}</td>
-                  <td>${el.contractStartDate}</td>
-                  <td>${el.contractEndDate}</td>
-                  <td>${el.contractDescription}</td>
+                  <td>${Number(i) + 1}</td>
+                  <td id="name">${res[i].name}</td>
+                  <td id="no">${res[i].no}</td>
+                  <td>${res[i].contractStartDate}</td>
+                  <td>${res[i].contractEndDate}</td>
+                  <td>${res[i].contractDescription}</td>
               `;
         tr.innerHTML = html;
 

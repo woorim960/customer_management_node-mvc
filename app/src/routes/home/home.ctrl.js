@@ -22,9 +22,9 @@ const read = {
   customers: (req, res) => {
     const query = req.query;
     const sql =
-      "SELECT no, name, contract_description AS contractDescription, date_format(contract_start_date, '%Y년 %m월 %d일') AS contractStartDate, date_format(contract_end_date, '%Y년 %m월 %d일') AS contractEndDate FROM customers WHERE name >= ? ORDER BY name;";
+      "SELECT no, name, contract_description AS contractDescription, date_format(contract_start_date, '%Y년 %m월 %d일') AS contractStartDate, date_format(contract_end_date, '%Y년 %m월 %d일') AS contractEndDate FROM customers WHERE name LIKE ? ORDER BY name;";
 
-    db.query(sql, [query.search], (err, customers) => {
+    db.query(sql, [`%${query.search}%`], (err, customers) => {
       if (err) throw err;
       res.json(customers);
     });
