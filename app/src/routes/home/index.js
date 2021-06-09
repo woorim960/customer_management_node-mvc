@@ -17,4 +17,10 @@ router.get("/api/sites/:no/:name", ctrl.read.sites);
 // Create Data
 router.post("/api/site", ctrl.create.site);
 
+// Update Data
+router.put("/api/site", ctrl.update.site);
+
+// Delete Data
+router.delete("/api/site", ctrl.del.site);
+
 module.exports = router;
