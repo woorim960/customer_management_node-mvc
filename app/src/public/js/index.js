@@ -1,6 +1,6 @@
 "use strict";
 
-const table = document.querySelector("table");
+const table = document.querySelector("tbody");
 const btnRead = document.querySelector("#read");
 const inputName = document.querySelector("#name");
 const btnView = document.querySelector("#button-view");
@@ -17,6 +17,7 @@ function clickHandler(e) {
 
 function readCustomer() {
   const input = inputName.value;
+  table.innerHTML = "";
 
   fetch(`/api/customers?search=${input}`)
     .then((res) => res.json())

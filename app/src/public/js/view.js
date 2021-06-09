@@ -19,15 +19,7 @@ function moveToRoot() {
 }
 
 function moveToInsertSite() {
-  const checkedNode = document.querySelectorAll(".checked");
-
-  if (checkedNode.length === 1) {
-    location.href = `/site/new/${no}/${name}`;
-  } else if (checkedNode.length === 0) {
-    alert("사이트 정보를 클릭해주십시오.");
-  } else {
-    alert("한개만 클릭해주십시오.");
-  }
+  location.href = `/site/new/${no}/${name}`;
 }
 
 function moveToUpdateSite() {
@@ -48,13 +40,13 @@ function view() {
   fetch(`/api/sites/${no}/${name}`)
     .then((res) => res.json())
     .then((res) => {
-      for (let el of res) {
+      for (let i in res) {
         const tr = document.createElement("tr");
         const html = `
-                  <td></td>
-                  <td id="no">${el.no}</td>
-                  <td id="name">${el.name}</td>
-                  <td>${el.address}</td>
+                  <td>${Number(i) + 1}</td>
+                  <td id="no">${res[i].no}</td>
+                  <td id="name">${res[i].name}</td>
+                  <td>${res[i].address}</td>
 
               `;
         tr.innerHTML = html;
