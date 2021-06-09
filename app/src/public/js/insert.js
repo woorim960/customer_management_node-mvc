@@ -10,10 +10,6 @@ function moveToRoot() {
   location.href = "/";
 }
 
-function moveToInsertSite() {
-  location.href = `/site/${no}/${name}`;
-}
-
 function view() {
   fetch(`/api/sites/${no}/${name}`)
     .then((res) => res.json())

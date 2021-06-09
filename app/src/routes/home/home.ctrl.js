@@ -11,6 +11,11 @@ const output = {
     const name = req.params.name;
     res.render("home/view", { no, name });
   },
+  insertSite: (req, res) => {
+    const no = req.params.no;
+    const name = req.params.name;
+    res.render("home/insert", { no, name });
+  },
 };
 
 const read = {
