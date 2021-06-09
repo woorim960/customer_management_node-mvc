@@ -14,12 +14,11 @@
   <div class="container">
     <div container="db-user-insert">
       <label for="user-no">고객 번호 : </label>
-      <input id="user-no" type="text" value="<%= no %>">
-
+      <input id="user-no" type="text" value="<%= no %>" disabled>
     </div>
     <div container="db-user-insert">
       <label for="user-name">고객 이름 : </label>
-      <input id="user-name" type="text" value="<%= name %>">
+      <input id="user-name" type="text" value="<%= name %>" disabled>
     </div>
 
 
@@ -35,8 +34,8 @@
     </div>
     <div class="db-user-button-container">
       <button class="button-insert">고객 사이트 입력</button>
-      <button>고객 사이트 수정</button>
-      <button>고객 사이트 삭제</button>
+      <button class="button-update">고객 사이트 수정</button>
+      <button class="buttn-delete">고객 사이트 삭제</button>
       <button class="button-ok">확인</button>
     </div>
   </div>
