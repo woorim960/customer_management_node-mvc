@@ -2,8 +2,7 @@
 고객 관리 프로그램
 
 ### 초기화면(index)
-![index](https://user-images.githubusercontent.com/75245755/121766906-156b1300-cb90-11eb-9828-7937342be842.PNG){: width="100" height="100"}  
-
+<img src="https://user-images.githubusercontent.com/75245755/121766906-156b1300-cb90-11eb-9828-7937342be842.PNG" width="40%">  
 #### index화면 조회(검색) 버튼 클릭  
 ![index2](https://user-images.githubusercontent.com/75245755/121767530-91b32580-cb93-11eb-8afc-88d22cebad2b.PNG)  
 #### index 고객 프로파일 사이트 조회  
