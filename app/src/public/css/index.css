@@ -6,10 +6,9 @@
   margin-bottom: 20px;
   padding: 15px;
   width: 50%;
-  border: 4px solid rgb(34, 0, 34);
-  border-radius: 12px;
+  border: 1px solid rgb(34, 0, 34);
+  background-color: #bdc3c7;
 }
-
 
 label {
   margin-top: 10px;  
@@ -28,33 +27,30 @@ input {
 .db-data-table {
   overflow-x: scroll;
   overflow-y: scroll;
-  /* table-layout: fixed; */
   border: 1px solid #222;
   width: 100%;
   height: 300px;
+  background: #fff;
 }
 
 th {
   border-right: 1px solid #bdc3c7;
   width: 10%;
-  color: rgb(109, 0, 89);
+  color: #222;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   padding: 2px;
 }
+
 th:first-child{
   width: 5%;
 }
 
-.checked {
-  background-color: #7f8c8d;
-}
-
 td {
   text-align: center;
-  border-right: 1px solid #bdc3c7;
-  border-top: 1px solid #bdc3c7;
+  border-right: 1px solid#bdc3c7;
+  border-top: 1px solid#bdc3c7;
   width: 10%;
   white-space: nowrap;
   overflow: hidden;
@@ -67,16 +63,19 @@ td:first-child {
   width: 5%;
 }
 
+.checked {
+  background-color: #222;
+  color: #fff;
+}
 
 button {
   margin: 0 0 20px 40px;
-
   font-size: 12px;
   font-weight: 500;
   width: 15%;
-  color: rgb(255, 234, 165);
-  background-color:rgb(75, 2, 65);
-  border-radius: 4px;
+  color: #222;
+  border: 1px solid #222;
+  background-color: #ecf0f1;
 }
 
 button:hover {
@@ -89,21 +88,6 @@ button:focus {
 
 button:active {
   transform: scale(0.98);
-}
-
-table button {
-  margin: 0 auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  padding: 2px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  font-size: 16px;
-  font-weight: 500;
-  width: 80%;
-  color: rgb(255, 234, 165);
-  background-color:rgb(75, 2, 65);
-  border-radius: 4px;
 }
 
 .db-user-button-container {
