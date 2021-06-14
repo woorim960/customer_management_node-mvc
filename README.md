@@ -2,11 +2,38 @@
 > 심심해서 만든 토이 프로젝트  
 개발 일자 : 2021년 06월 12일
 
-  * <a href="#-api">API</a>
   * <a href="#-developer">Developer</a>
   * <a href="#-tech-stack">Tech Stack</a>
+  * <a href="#-api">API</a>
   * <a href="#-ui">UI</a>
   * <a href="#-erd">ERD</a>
+
+<br>
+
+### 👨🏻‍💻 Developer
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/woorim960"><img src="https://avatars.githubusercontent.com/u/56839474?v=4" width="100px;" alt=""/><br /><sub><b>박우림</b></sub></a><br /><a href="https://github.com/woorim960" title="Packaging/porting to new platform">백엔드 개발</a></td>
+    <td align="center"><a href="https://github.com/jsj1510"><img src="https://avatars.githubusercontent.com/u/75245755?v=4" width="100px;" alt=""/><br /><sub><b>전상준</b></sub></a><br /><a href="https://github.com/jsj1510" title="Packaging/porting to new platform">프런트 개발</a></td>
+  </tr>
+</table>
+
+<br>
+
+### 📚 Tech Stack
+* **Back**
+   - Node.js
+   - Express
+   - MySQL
+   - EJS
+   - dotenv  
+
+* **Front**
+   - HTML5 ```EJS```
+   - CSS3
+   - Vanila JS ```ES6+```
+   - DOM
+
 
 <br>
 
@@ -57,32 +84,6 @@
    ```sql
    DELETE FROM sites WHERE no=?
    ```
-
-<br>
-
-### 👨🏻‍💻 Developer
-<table>
-  <tr>
-    <td align="center"><a href="https://github.com/woorim960"><img src="https://avatars.githubusercontent.com/u/56839474?v=4" width="100px;" alt=""/><br /><sub><b>박우림</b></sub></a><br /><a href="https://github.com/woorim960" title="Packaging/porting to new platform">백엔드 개발</a></td>
-    <td align="center"><a href="https://github.com/jsj1510"><img src="https://avatars.githubusercontent.com/u/75245755?v=4" width="100px;" alt=""/><br /><sub><b>전상준</b></sub></a><br /><a href="https://github.com/jsj1510" title="Packaging/porting to new platform">프런트 개발</a></td>
-  </tr>
-</table>
-
-<br>
-
-### 📚 Tech Stack
-* **Back**
-   - Node.js
-   - Express
-   - MySQL
-   - EJS
-   - dotenv  
-
-* **Front**
-   - HTML5 ```EJS```
-   - CSS3
-   - Vanila JS ```ES6+```
-   - DOM
 
 <br>
 
