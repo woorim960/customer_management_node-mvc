@@ -75,7 +75,7 @@
    -  **METHOD :** ```PUT```
    -  **SQL :** 
    ```sql
-   UPDATE sites SET name=?, address=? WHERE no=?;DELETE FROM sites WHERE no=?
+   UPDATE sites SET name=?, address=? WHERE no=?;
    ```
 6. 사이트 삭제
    -  **URL :** ```/api/site``` 
